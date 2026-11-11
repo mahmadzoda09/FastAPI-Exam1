@@ -41,7 +41,7 @@ def get_project_tasks(db: Session, project_id: int):
     project = db.get(Project, project_id)
     if project:
         return project.tasks
-    return None
+    return {'Not Found'}
 
 ############Employee CRUD############
 
@@ -84,7 +84,7 @@ def get_employee_tasks(db: Session, employee_id: int):
     employee = db.get(Employee, employee_id)
     if employee:
         return employee.tasks
-    return None
+    return {'Not Found'}
 
 ############Task CRUD############
 
